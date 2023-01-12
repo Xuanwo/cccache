@@ -388,6 +388,10 @@ impl Storage for opendal::Operator {
     }
 
     async fn check(&self) -> Result<CacheMode> {
+        if std::env::var("SCCACHE_BYPASS_CHECK").is_ok() {
+            return Ok(CacheMode::ReadWrite);
+        }
+
         use opendal::ErrorKind;
 
         let path = ".sccache_check";
