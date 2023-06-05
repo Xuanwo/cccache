@@ -1611,7 +1611,7 @@ checksum = "b7e5500299e16ebb147ae15a00a942af264cf3688f47923b8fc2cd5858f23ad3"
 [[package]]
 name = "opendal"
 version = "0.34.0"
-source = "git+https://github.com/apache/incubator-opendal?rev=a15b9dfdb0391997bb61fb0ff0a8af02f8804cfa#a15b9dfdb0391997bb61fb0ff0a8af02f8804cfa"
+source = "git+https://github.com/apache/incubator-opendal?rev=84b5e94be3a46ae5614ea98989cbe652c5b38f3f#84b5e94be3a46ae5614ea98989cbe652c5b38f3f"
 dependencies = [
  "anyhow",
  "async-compat",
@@ -2278,7 +2278,7 @@ dependencies = [
 
 [[package]]
 name = "sccache"
-version = "0.5.3-debug-7"
+version = "0.5.3-debug-8"
 dependencies = [
  "anyhow",
  "ar",
