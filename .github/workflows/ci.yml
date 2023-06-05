@@ -1,5 +1,8 @@
 name: ci
-on: [push, pull_request]
+on:
+  push:
+    tags:
+      - '*'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
@@ -44,8 +47,6 @@ jobs:
           sed 2iREALGCC=aarch64-linux-gnu-gcc-10 /usr/bin/musl-gcc | sudo tee /usr/bin/aarch64-linux-musl-gcc > /dev/null
           sudo chmod +x /usr/bin/aarch64-linux-musl-gcc
         if: ${{ matrix.target == 'aarch64-unknown-linux-musl' }}
-
-      - uses: Swatinem/rust-cache@v2
 
       - name: Build
         run: cargo build --locked --release --bin ${{ matrix.binary || 'sccache' }} --target ${{ matrix.target }} --features=openssl/vendored ${{ matrix.extra_args }}
