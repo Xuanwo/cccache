@@ -1,6 +1,6 @@
 [package]
 name = "sccache"
-version = "0.5.3-debug-8"
+version = "0.5.3-debug-9"
 license = "Apache-2.0"
 description = "Sccache is a ccache-like tool. It is used as a compiler wrapper and avoids compilation when possible, storing a cache in a remote storage using various cloud storage."
 repository = "https://github.com/mozilla/sccache/"
@@ -23,7 +23,7 @@ lto = true
 strip = true
 
 [dependencies]
-opendal = { git = "https://github.com/apache/incubator-opendal", rev = "84b5e94be3a46ae5614ea98989cbe652c5b38f3f", optional = true }
+opendal = { git = "https://github.com/apache/incubator-opendal", rev = "545d43f4ebfca2baf86662ddf0ca4792841d8bb2", optional = true }
 anyhow = { version = "1.0", features = ["backtrace"] }
 ar = "0.9"
 async-trait = "0.1"
@@ -32,7 +32,7 @@ bincode = "1"
 blake3 = "1"
 byteorder = "1.0"
 bytes = "1"
-reqsign = { version = "0.10.1", optional = true }
+reqsign = { version = "0.12.0", optional = true }
 clap = { version = "4.1.11", features = ["derive", "env", "wrap_help"] }
 directories = "5.0.0"
 encoding = "0.2"
