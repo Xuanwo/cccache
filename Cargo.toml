@@ -1,14 +1,15 @@
 [package]
+name = "sccache"
+version = "0.5.3-debug-11"
+
 categories = ["command-line-utilities", "development-tools::build-utils"]
 description = "Sccache is a ccache-like tool. It is used as a compiler wrapper and avoids compilation when possible, storing a cache in a remote storage using various cloud storage."
 edition = "2021"
 keywords = ["ccache"]
 license = "Apache-2.0"
-name = "sccache"
 readme = "README.md"
 repository = "https://github.com/mozilla/sccache/"
 rust-version = "1.65"
-version = "0.5.3-debug-11"
 
 [[bin]]
 name = "sccache"
